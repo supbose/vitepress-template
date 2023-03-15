@@ -8,8 +8,15 @@
 		"docs:dev": "pnpm --filter docs docs:dev",
 		"docs:cloud": "pnpm TempPull && pnpm --filter docs cloud"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"api",
+		"uitls",
+		"tusp",
+		"vite",
+		"vitepress",
+		"vue3"
+	],
+	"author": "supbose",
 	"license": "ISC",
 	"devDependencies": {
 		"bumpp": "^9.0.0"

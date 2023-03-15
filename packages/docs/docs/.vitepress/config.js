@@ -38,7 +38,7 @@ export default defineConfig({
 		siteTitle: false,
 		head: [
 			// 添加图标
-			['link', { rel: 'icon', href: '/favicon.png' }]
+			['link', { rel: 'shortcut icon', href: '/favicon.png' }]
 		],
 		lastUpdatedText: '最后更新',
 		docFooter: {
@@ -68,7 +68,7 @@ export default defineConfig({
 
 		footer: {
 			message: 'Released under the MIT License.',
-			copyright: `Copyright © 2021 by supbose | ${version} | <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备12005073号-3</a>`
+			copyright: `Copyright © 2021 by supbose | version:${version} | <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备12005073号-3</a>`
 		}
 	}
 })
