@@ -178,4 +178,6 @@
     "volar.autoCompleteRefs": true,
     "javascript.format.insertSpaceAfterConstructor": true,
     "aiXcoder.showTrayIcon": true,
+    "editor.definitionLinkOpensInPeek": false,
+    "editor.mouseWheelZoom": true,
 }

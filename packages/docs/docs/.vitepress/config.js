@@ -4,7 +4,10 @@ import { defineConfig } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 const version = require('../../package.json').version
-import { getSidebarData, getNavData } from './navSidebarUtil'
+// import { getSidebarData, getNavData } from './navSidebarUtil'
+
+import nav from './nav'
+import sidebar from './sidebar'
 import updateInfo from './watchJson.json'
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
 
@@ -49,8 +52,23 @@ export default defineConfig({
 		outline: 'deep',
 		// 启动页面丝滑滚动
 		smoothScroll: true,
-		nav: getNavData({ enableDirActiveMatch: true }),
-		sidebar: getSidebarData(),
+
+		nav: nav({ enableDirActiveMatch: false }),
+		sidebar: sidebar(),
+
+		// nav: getNavData({ enableDirActiveMatch: true }),
+		// nav: [
+		// 	{ text: 'Guide', link: '/guide' },
+		// 	{
+		// 		text: 'Dropdown Menu',
+		// 		items: [
+		// 			{ text: 'Item A', link: '/item-1' },
+		// 			{ text: 'Item B', link: '/item-2' },
+		// 			{ text: 'Item C', link: '/item-3' }
+		// 		]
+		// 	}
+		// ],
+		// sidebar: getSidebarData(),
 
 		// editLink: {
 		// 	pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
