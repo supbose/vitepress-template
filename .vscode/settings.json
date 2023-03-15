@@ -1,0 +1,180 @@
+{
+    "autoHeader": {
+        "format": {
+            "startWith": "/**",
+            "middleWith": "*",
+            "endWith": "*/",
+            "headerPrefix": "@",
+        },
+        "header": {
+            "Author": "supbose",
+            "Create Time": {
+                "type": "createTime",
+                "format": "YYYY-MM-DD HH:mm:ss",
+            },
+            "Modified by": {
+                "type": "modifier",
+                "value": "supbose",
+            },
+            "Modified time": {
+                "type": "modifyTime",
+                "format": "YYYY-MM-DD HH:mm:ss"
+            },
+            "Description": "qingshu.work",
+        }
+    },
+    "workbench.productIconTheme": "el-vsc-v1-icons",
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnType": true,
+    "volar.codeLens.pugTools": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "javascript.format.semicolons": "remove",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    // 粘贴时格式化代码
+    "editor.formatOnPaste": true,
+    // 保存时格式化代码
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true,
+    "prettier.trailingComma": "none",
+    "prettier.semi": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.autoprefix": [
+        // "> 1%",
+        // "last 3 versions"
+        // "ie >= 6", //ie6以上
+        // "firefox >= 8",
+        // "chrome >= 24",
+        // "Opera>=10"
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.formats": [ //expanded, compact, compressed or nested
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/css"
+        }
+    ],
+    "liveServer.settings.useBrowserPreview": true,
+    "livePreview.portNumber": 5050,
+    "files.autoSave": "onFocusChange",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": false,
+        "source.formatAll": false,
+        "source.organizeImports": false,
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true,
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "window.commandCenter": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.enablePreview": false,
+    "files.associations": {
+        "*.nvue": "vue"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 2,
+    "update.enableWindowsBackgroundUpdates": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "update.showReleaseNotes": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "tabnine.experimentalAutoImports": true,
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "settingsSync.ignoredExtensions": [
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "coenraads.bracket-pair-colorizer-2",
+        "chyhutu.codecomment",
+        "tht13.html-preview-vscode",
+        "obkoro1.korofileheader"
+    ],
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "markdownlint.config": {
+        "default": true,
+        "MD033": false, // 加这一句
+        "MD041": false,
+        "md012": false
+    },
+    // This is all that matters
+    "workbench.colorTheme": "Bearded Theme HC Ebony",
+    // The Cursive font is operator Mono, it's $200 and you need to buy it to get the cursive. Dank Mono or Victor Mono are good alternatives
+    // "editor.fontFamily": "'JetBrains Mono','Fira Code',Menlo,Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 25,
+    "editor.letterSpacing": 0.5,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontWeight": "300",
+    "prettier.eslintIntegration": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 5,
+    "editor.cursorBlinking": "solid",
+    "editor.renderWhitespace": "none",
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#ffd700",
+        "editorBracketHighlight.foreground2": "#da70d6",
+        "editorBracketHighlight.foreground3": "#179fff",
+        "editorBracketHighlight.foreground4": "#24d600",
+        "editorBracketHighlight.foreground5": "#00d8d8",
+        "editorBracketHighlight.foreground6": "#ee0255",
+        "editor.selectionBackground": "#ec4f4f"
+    },
+    "workbench.view.alwaysShowHeaderActions": true,
+    // "editor.fontLigatures": true,
+    // "editor.fontFamily": "'Cascadia Code','Jetbrains Mono', Consolas, 'Courier New', monospace",
+    // "editor.fontFamily": "'Fira Code','JetBrains Mono'",
+    "editor.fontFamily": "'Cascadia Code','Jetbrains Mono', Consolas, 'Courier New'",
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+    "debug.console.fontFamily": "Cascadia Code",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Comment",
+                "scope": [
+                    "comment",
+                    "comment.block",
+                    "comment.block.documentation",
+                    "comment.line",
+                    "comment.line.double-slash",
+                    "punctuation.definition.comment",
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ],
+        "comments": "#848987", // 注释
+        "keywords": "#a8a80d", // 关键字
+        "variables": "#d4289b", // 变量名
+        "strings": "#db6c11b0", // 字符串
+        "functions": "#e3e2eac9", // 函数名
+        "numbers": "#9d1fbd" // 数字
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "volar.autoCompleteRefs": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+}
