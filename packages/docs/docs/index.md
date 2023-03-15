@@ -17,7 +17,7 @@ hero:
 features:
   - icon: 🚀
     title: Vite, The DX that can't be beat
-    details: 00000
+    details: 写个数字就这么难啊
   - icon: 🖖
     title: Power of Vue meets Markdown
     details: Lorem ipsum...

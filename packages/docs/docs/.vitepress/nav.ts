@@ -1,3 +1,11 @@
+/**
+ * @ Author: supbose
+ * @ Create Time: 2023-03-15 18:27:53
+ * @ Modified by: supbose
+ * @ Modified time: 2023-03-16 00:22:14
+ * @ Description: qingshu.work
+ */
+
 import { resolve, join, sep } from 'path'
 import { readdirSync, statSync } from 'fs'
 import { DefaultTheme } from 'vitepress'
@@ -67,7 +75,7 @@ export default function getNavData(navGenerateConfig: NavGenerateConfig) {
 
 	const result = getNavDataArr(dirFullPath, 1, maxLevel, enableDirActiveMatch)
 	// console.log('navData:->')
-	console.log(JSON.stringify(result))
+	// console.log(JSON.stringify(result))
 	// return JSON.stringify(result)
 	return result
 }
@@ -101,7 +109,7 @@ function getNavDataArr(
 		const link = getDocsDirNameAfterStr(fileOrDirFullPath)
 			.replace('.md', '')
 			.replace(/\\/g, '/')
-		console.log('fileOrDirFullPath----->  ', fileOrDirFullPath)
+		// console.log('fileOrDirFullPath----->  ', fileOrDirFullPath)
 		// console.log(link)
 		const text = fileOrDirName.match(/^[0-9]{2}-.+/)
 			? fileOrDirName.substring(3)
@@ -109,14 +117,16 @@ function getNavDataArr(
 		if (stats.isDirectory()) {
 			// 当前为文件夹
 
-			console.log(level)
+			// console.log(level)
 			let dirData: DefaultTheme.NavItem = {
 				text,
-				link: `${link}/`
+				link: `${link}/`,
+				items: []
 			}
-			if (level === 1) {
-				delete dirData.link
-			}
+			// if (level === 1) {
+			// 	delete dirData.link
+			// }
+
 			if (level !== maxLevel) {
 				// @ts-ignore
 				dirData.items = getNavDataArr(
@@ -129,7 +139,13 @@ function getNavDataArr(
 			if (enableActiveMatch) {
 				dirData.activeMatch = link + '/'
 			}
-			// console.log('dirData:', dirData)
+			if (level === 1) {
+				delete dirData['link']
+			}
+			if (dirData['items'].length == 0) {
+				delete dirData['items']
+				dirData['link'] = `${link}/`
+			}
 			result.push(dirData)
 		} else if (isMarkdownFile(fileOrDirName)) {
 			// 当前为文件

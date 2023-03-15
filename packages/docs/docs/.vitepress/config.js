@@ -1,3 +1,11 @@
+/**
+ * @ Author: supbose
+ * @ Create Time: 2023-03-15 10:28:51
+ * @ Modified by: supbose
+ * @ Modified time: 2023-03-16 00:25:46
+ * @ Description: qingshu.work
+ */
+
 import { createRequire } from 'module'
 import { defineConfig } from 'vitepress'
 
@@ -41,7 +49,7 @@ export default defineConfig({
 		siteTitle: false,
 		head: [
 			// 添加图标
-			['link', { rel: 'shortcut icon', href: '/favicon.png' }]
+			['link', { rel: 'icon', href: '/favicon.png' }]
 		],
 		lastUpdatedText: '最后更新',
 		docFooter: {
@@ -52,24 +60,10 @@ export default defineConfig({
 		outline: 'deep',
 		// 启动页面丝滑滚动
 		smoothScroll: true,
-
-		nav: nav({ enableDirActiveMatch: false }),
+		nav: nav({ enableDirActiveMatch: true }),
 		sidebar: sidebar(),
-
 		// nav: getNavData({ enableDirActiveMatch: true }),
-		// nav: [
-		// 	{ text: 'Guide', link: '/guide' },
-		// 	{
-		// 		text: 'Dropdown Menu',
-		// 		items: [
-		// 			{ text: 'Item A', link: '/item-1' },
-		// 			{ text: 'Item B', link: '/item-2' },
-		// 			{ text: 'Item C', link: '/item-3' }
-		// 		]
-		// 	}
-		// ],
 		// sidebar: getSidebarData(),
-
 		// editLink: {
 		// 	pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
 		// 	text: '编辑'
