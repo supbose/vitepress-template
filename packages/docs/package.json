@@ -1,14 +1,15 @@
 {
 	"name": "docs",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"docs:dev": "vitepress dev docs",
 		"docs:build": "vitepress build docs",
 		"docs:preview": "vitepress preview docs",
 		"docs:release": "pnpm exec bumpp -r",
-		"ftp": "node ./scripts/ftp.js",
+		"ftp": "node --experimental-json-modules ./scripts/ftp.config.js",
 		"cloud": "pnpm docs:release && pnpm docs:build && pnpm ftp"
 	},
 	"keywords": [],
