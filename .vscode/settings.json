@@ -177,4 +177,5 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "volar.autoCompleteRefs": true,
     "javascript.format.insertSpaceAfterConstructor": true,
+    "aiXcoder.showTrayIcon": true,
 }
