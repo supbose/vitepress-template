@@ -1,12 +1,17 @@
 {
 	"name": "template",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"docs:dev": "pnpm --filter docs docs:dev"
+		"TempPull": "pnpm exec bumpp -r",
+		"docs:dev": "pnpm --filter docs docs:dev",
+		"docs:cloud": "pnpm --filter docs cloud"
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"bumpp": "^9.0.0"
+	}
 }
