@@ -9,8 +9,8 @@
 		"docs:preview": "vitepress preview docs"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "supbose",
+	"license": "MIT",
 	"devDependencies": {
 		"@algolia/client-search": ">= 4.9.1 < 6",
 		"@pzy915/vitepress-plugin-search": "1.0.4-alpha.19-3",
