@@ -1,10 +1,10 @@
 {
 	"name": "template",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"TempPull": "pnpm exec bumpp",
+		"TempPull": "pnpm exec bumpp --stream",
 		"docs:dev": "pnpm --filter docs docs:dev",
 		"docs:cloud": "pnpm --filter docs cloud"
 	},
