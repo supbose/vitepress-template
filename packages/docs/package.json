@@ -1,6 +1,6 @@
 {
 	"name": "docs",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "",
 	"main": "index.js",
 	"type": "module",
@@ -23,6 +23,7 @@
 		"@vitejs/plugin-vue": "^4.0.0",
 		"@vitejs/plugin-vue-jsx": "^3.0.0",
 		"bumpp": "^9.0.0",
+		"chokidar": "^3.5.3",
 		"flexsearch": "^0.7.31",
 		"ssh2-sftp-client": "^9.0.4",
 		"typescript": "^4.9.3",
