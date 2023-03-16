@@ -117,7 +117,8 @@
         "default": true,
         "MD033": false, // 加这一句
         "MD041": false,
-        "md012": false
+        "MD012": false,
+        "MD010": false
     },
     // This is all that matters
     "workbench.colorTheme": "Bearded Theme HC Ebony",

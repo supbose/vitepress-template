@@ -11,7 +11,7 @@ importers:
   packages/docs:
     specifiers:
       '@algolia/client-search': '>= 4.9.1 < 6'
-      '@pzy915/vitepress-plugin-search': 1.0.4-alpha.19-3
+      '@qingshu/vitepress-plugin-search': ^1.0.3
       '@samkirkland/ftp-deploy': ^1.2.2
       '@types/node': ^18.15.3
       '@vitejs/plugin-vue': ^4.0.0
@@ -31,7 +31,7 @@ importers:
       vue: 3.2.47
     devDependencies:
       '@algolia/client-search': 4.15.0
-      '@pzy915/vitepress-plugin-search': 1.0.4-alpha.19-3_no3shqqgciwu7zrp73l2echm3e
+      '@qingshu/vitepress-plugin-search': 1.0.3_no3shqqgciwu7zrp73l2echm3e
       '@samkirkland/ftp-deploy': 1.2.2
       '@types/node': 18.15.3
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.4+vue@3.2.47
@@ -794,8 +794,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@pzy915/vitepress-plugin-search/1.0.4-alpha.19-3_no3shqqgciwu7zrp73l2echm3e:
-    resolution: {integrity: sha512-PryXj9erqpEfS8CaYRGZt1l1F4Lk7oSnYPaBz1MjUQMJ6wNmjQZJMmdAcLGnwaK9lzgfns7bNtdKIrYeMWjrpQ==}
+  /@qingshu/vitepress-plugin-search/1.0.3_no3shqqgciwu7zrp73l2echm3e:
+    resolution: {integrity: sha512-0K1t1EYJoyO3iPMOxClraQxJSScJ9CjTKdNeMNU2Az1rpY6wcmNFmRe6IGi9CO72v16/AQ01+x7bRjzwZ0g45w==}
     engines: {node: ^14.13.1 || ^16.7.0 || >=18}
     peerDependencies:
       flexsearch: ^0.7.31

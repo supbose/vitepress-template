@@ -1,8 +1,6 @@
-// import VitePluginVitepressDemo from '@pzy915/vite-plugin-vitepress-demo'
 import { ConfigEnv, defineConfig } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { SearchPlugin } from '@pzy915/vitepress-plugin-search'
-
+import { SearchPlugin } from '@qingshu/vitepress-plugin-search'
 export default defineConfig((env: ConfigEnv) => {
 	return {
 		plugins: [

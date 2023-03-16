@@ -2,13 +2,12 @@
  * @ Author: supbose
  * @ Create Time: 2023-03-15 10:28:51
  * @ Modified by: supbose
- * @ Modified time: 2023-03-16 00:25:46
+ * @ Modified time: 2023-03-16 19:28:48
  * @ Description: qingshu.work
  */
 
 import { createRequire } from 'module'
 import { defineConfig } from 'vitepress'
-
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 const version = require('../../package.json').version
@@ -38,6 +37,7 @@ export default defineConfig({
 		},
 		lineNumbers: true,
 		config: (md) => {
+			// md.use(demoblock),
 			md.use(mdItCustomAttrs, 'image', {
 				'data-fancybox': 'gallery'
 			})
