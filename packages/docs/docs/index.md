@@ -3,7 +3,7 @@ layout: home
 
 hero:
   heroImage: /favicon.png
-  tagline: Learning()->{return `world without end`}
+  # tagline: Learning()->{return `world without end`}
   # text:
   #   VitePress趣玩系列
   # tagline: Lorem ipsum...

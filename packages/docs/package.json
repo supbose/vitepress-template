@@ -25,6 +25,7 @@
 		"bumpp": "^9.0.0",
 		"chokidar": "^3.5.3",
 		"flexsearch": "^0.7.31",
+		"sass": "^1.59.3",
 		"ssh2-sftp-client": "^9.0.4",
 		"typescript": "^4.9.3",
 		"vite": "^4.1.0",
