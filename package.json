@@ -1,12 +1,13 @@
 {
 	"name": "template",
-	"version": "1.0.10-beta.2",
+	"version": "1.0.10-beta.3",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"TempPull": "pnpm exec bumpp -r",
 		"docs:dev": "pnpm --filter docs docs:dev",
-		"docs:cloud": "pnpm TempPull && pnpm --filter docs cloud"
+		"docs:cloud": "pnpm TempPull && pnpm --filter docs cloud",
+		"docs:Nocloud": "pnpm TempPull && pnpm --filter docs docs:build"
 	},
 	"keywords": [
 		"api",
