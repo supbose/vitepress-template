@@ -2,19 +2,19 @@ import Theme from 'vitepress/theme'
 import { h } from 'vue'
 import AnimateTitle from './components/AnimationTitle.vue'
 import imagesArticle from './components/imagesArticle.vue'
-import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
-import { useComponents } from './useComponents'
-import './styles/index.css'
-import Button from '../../../src/components/Button.vue'
-import '../../../src/styles/index.css'
+import { AntDesignContainer } from '@vitepress-demo-preview/component'
+// import '@vitepress-demo-preview/component/dist/style.css'
+import './styles/style.css'
+
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 export default {
   ...Theme,
   enhanceApp({ app }) {
+    app.use(ElementPlus)
     app.component('imagesArticle', imagesArticle)
-    useComponents(app)
-    app.component(Button.name, Button)
-    // app.component('ArcoVue', ArcoVue)
+    app.component('demo-preview', AntDesignContainer)
   },
   Layout() {
     return h(Theme.Layout, null, {

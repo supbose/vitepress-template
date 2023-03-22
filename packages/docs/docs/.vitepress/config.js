@@ -2,7 +2,7 @@
  * @ Author: supbose
  * @ Create Time: 2023-03-15 10:28:51
  * @ Modified by: supbose
- * @ Modified time: 2023-03-22 13:14:20
+ * @ Modified time: 2023-03-22 20:11:01
  * @ Description: qingshu.work
  */
 
@@ -17,7 +17,11 @@ import nav from './nav'
 import sidebar from './sidebar'
 import updateInfo from './watchJson.json'
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
-import { demoBlockPlugin } from 'vitepress-theme-demoblock'
+
+import {
+  componentPreview,
+  containerPreview,
+} from '@vitepress-demo-preview/plugin'
 
 console.log(updateInfo)
 
@@ -39,13 +43,11 @@ export default defineConfig({
     },
     lineNumbers: true,
     config: (md) => {
-      // md.use(demoblock),
+      md.use(componentPreview)
+      md.use(containerPreview)
       md.use(mdItCustomAttrs, 'image', {
         'data-fancybox': 'gallery',
-      }),
-        md.use(demoBlockPlugin, {
-          cssPreprocessor: 'less',
-        })
+      })
     },
   },
 
