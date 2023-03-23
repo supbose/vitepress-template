@@ -7,7 +7,7 @@
   "scripts": {
     "register:components": "vitepress-rc",
     "watchChangeRestartVitepress": "node ./docs/.vitepress/watchChangeRestartVitepress.mjs",
-    "docs:dev": "pnpm run register:components && vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
     "docs:dev1": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
