@@ -67,3 +67,4 @@
 | type    | 类型   | string  | primary / success / warning / info / danger / text | primary |
 | loading | 加载中 | boolean | —                                                  | false   |
 
+<!-- <preview path="../../../demos/foo.vue" title="基本使用" description="测试使用 Element Plus 组件"></preview> -->
