@@ -98,7 +98,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "explorer.confirmDelete": false,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "update.enableWindowsBackgroundUpdates": false,
     "vsicons.dontShowNewVersionMessage": true,
     "update.showReleaseNotes": false,
@@ -121,7 +121,7 @@
         "MD010": false
     },
     // This is all that matters
-    "workbench.colorTheme": "Default High Contrast",
+    "workbench.colorTheme": "Bearded Theme Vivid Purple",
     // The Cursive font is operator Mono, it's $200 and you need to buy it to get the cursive. Dank Mono or Victor Mono are good alternatives
     // "editor.fontFamily": "'JetBrains Mono','Fira Code',Menlo,Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,

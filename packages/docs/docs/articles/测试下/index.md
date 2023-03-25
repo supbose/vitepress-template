@@ -1,5 +1,6 @@
 ---
 title: { { name } }
+lastUpdated: false
 editLink: true
 lastUpdated: false
 aside: false
@@ -12,4 +13,4 @@ author:
   link: https://github.com/supbose
 ---
 
-# Docs 生成模版{{name}}
+# Docs 生成模版测试下\index

@@ -26,7 +26,7 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { PropType, defineProps, reactive } from 'vue'
+import { PropType, reactive } from 'vue'
 // import { Button } from '@arco-design/web-vue'
 // import { Avatar } from '@arco-design/web-vue'
 

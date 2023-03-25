@@ -3,19 +3,28 @@
 
 import { relative } from 'path'
 import { readdirSync, lstatSync } from 'fs'
-
+import chalk from 'chalk'
+const error = chalk.bold.red
+const warning = chalk.hex('#FFA500')
+const DocsFolder = 'docs/articles'
 function getFolder(path) {
   let components = []
   const files = readdirSync(path)
   files.forEach(function (item) {
     let stat = lstatSync(path + '/' + item)
     if (stat.isDirectory() === true && item !== 'components') {
-      components.push(path + '/')
-      // components.push(path + '/' + item)
+      components.push(path + '/' + item)
       components.push.apply(components, getFolder(path + '/' + item))
     }
   })
   return components
+}
+
+const getFolderAdd = () => {
+  let s = getFolder(DocsFolder)
+  s.unshift(DocsFolder)
+  // console.log(s)
+  return s
 }
 
 export default (plop) => {
@@ -23,21 +32,22 @@ export default (plop) => {
   // setGenerator可以设置一个生成器，每个生成器都可用于生成特定的文件
   // 接收两个参数，生成器的名称和配置选项
 
-  plop.setGenerator('default-page', {
+  plop.setGenerator('create Markdown documents', {
     // 生成器的描述
-    description: '创建一个默认页面',
+    description: '创建Markdown文件',
     // 命令行提示
     prompts: [
       {
         type: 'list',
         name: 'path',
-        message: '请选择页面创建目录',
-        choices: getFolder('docs/articles'),
+        message: '请选择文档所创建的目录',
+        choices: getFolderAdd,
       },
       {
         type: 'input',
         name: 'name', // 接收变量的参数
-        message: '请输入页面文件名称',
+        message: '请输入Markdown文件名称',
+        default: '目录名/文档名 或者 直接文档名',
         validate: (v) => {
           if (!v || v.trim === '') {
             return '文件名不能为空'
@@ -46,18 +56,32 @@ export default (plop) => {
           }
         },
       },
+      {
+        type: 'confirm',
+        name: 'confirm',
+        message: '是否创建',
+        default: false,
+        value: 'confirm',
+      },
     ],
     // 完成命令行后执行的操作，每个对象都是动作对象
     actions: (data) => {
-      let relativePath = relative('docs', data.path)
+      if (data.confirm == false) {
+        console.log(
+          `${error('[取消创建]')} ${warning('Markdown文档')} -> ${data.name} `
+        )
+        return
+      }
+      let relativePath = relative(DocsFolder, data.path)
       const actions = [
         {
           type: 'add', // 动作类型
-          path: `${data.path}/{{name}}.vue`, // 生成文件的输出路径
-          templateFile: 'plop-templates/docs.md', // template 模板的文件路径，目录下的文件遵循hbs的语法规则
+          path: `${data.path}/{{name}}.md`, // 生成文件的输出路径
+          templateFile: 'plop-templates/docs.hbs', // template 模板的文件路径，目录下的文件遵循hbs的语法规则
           data: {
             componentName: `${relativePath} ${data.name}`,
           },
+          abortOnFail: true,
         },
       ]
       return actions
@@ -71,7 +95,7 @@ export default (plop) => {
         type: 'list',
         name: 'path',
         message: '请选择页面创建目录',
-        choices: getFolder('docs/articles'),
+        choices: getFolderAdd,
       },
       {
         type: 'input',
@@ -87,7 +111,7 @@ export default (plop) => {
       },
     ],
     actions: (data) => {
-      let relativePath = relative('docs/articles', data.path)
+      let relativePath = relative(DocsFolder, data.path)
       const actions = [
         {
           type: 'add',
@@ -115,7 +139,7 @@ export default (plop) => {
         type: 'list',
         name: 'path',
         message: '请选择组件创建目录',
-        choices: getFolder('docs/articles'),
+        choices: getFolderAdd,
         when: (answers) => {
           return !answers.isGlobal
         },

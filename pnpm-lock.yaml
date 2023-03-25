@@ -19,6 +19,7 @@ importers:
       '@vitepress-demo-preview/component': ^2.2.0
       '@vitepress-demo-preview/plugin': ^1.1.7
       bumpp: ^9.0.0
+      chalk: ^5.2.0
       chokidar: ^3.5.3
       element-plus: ^2.3.1
       flexsearch: ^0.7.31
@@ -46,6 +47,7 @@ importers:
       '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
       '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.2.1+vue@3.2.47
       bumpp: 9.0.0
+      chalk: 5.2.0
       chokidar: 3.5.3
       flexsearch: 0.7.31
       less: 4.1.3
