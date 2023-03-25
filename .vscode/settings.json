@@ -114,14 +114,14 @@
     ],
     "editor.unicodeHighlight.invisibleCharacters": false,
     "markdownlint.config": {
-        "default": true,
+        "default": false,
         "MD033": false, // 加这一句
         "MD041": false,
         "MD012": false,
         "MD010": false
     },
     // This is all that matters
-    "workbench.colorTheme": "Bearded Theme HC Ebony",
+    "workbench.colorTheme": "Default High Contrast",
     // The Cursive font is operator Mono, it's $200 and you need to buy it to get the cursive. Dank Mono or Victor Mono are good alternatives
     // "editor.fontFamily": "'JetBrains Mono','Fira Code',Menlo,Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
