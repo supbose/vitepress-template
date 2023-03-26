@@ -1,4 +1,4 @@
-<template class="s">
+<template>
     <div class="imgArticle">
         <!-- <Button type="primary">Primary</Button> -->
 
@@ -15,7 +15,7 @@
                     :style="{ backgroundColor: 'var(--vp-c-bg-soft-up)', color: '#c1c4c79a', padding: '3px' }"
                     @error="errorHandler" :imageUrl="item.img">
                 </Avatar> -->
-                    <img :src="item.img" alt="" mode="scaleToFill">
+                    <img :src="item.img ?? 'https://www.baidu.com/img/bd_logo1.png'" alt="" mode="scaleToFill">
                 </div>
                 <div class="font">
                     {{ item.text }}
@@ -27,10 +27,6 @@
 </template>
 <script lang="ts" setup>
 import { PropType, reactive } from 'vue'
-// import { Button } from '@arco-design/web-vue'
-// import { Avatar } from '@arco-design/web-vue'
-
-
 
 
 interface typeListData {

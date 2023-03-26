@@ -6,7 +6,7 @@ import { readdirSync, lstatSync } from 'fs'
 import chalk from 'chalk'
 
 const error = chalk.bold.red
-const warning = chalk.hex('#FFA500')
+const warning = chalk.hex('#f90505')
 const DocsFolder = 'docs/articles'
 const previewDemoFolder = 'docs/demos'
 function getFolder(path) {
@@ -21,11 +21,9 @@ function getFolder(path) {
   })
   return components
 }
-
 const getFolderAdd = () => {
   let Folder = getFolder(DocsFolder)
   Folder.unshift(DocsFolder)
-
   return Folder
 }
 const getFolderAddpreviewDemo = () => {
@@ -36,7 +34,7 @@ const getFolderAddpreviewDemo = () => {
 let reg = new RegExp('^[a-zA-Z0-9\u4e00-\u9fa5\u0800-\u4e00]+$')
 
 export default (plop) => {
-  plop.setWelcomeMessage('请选择需要创建的模式：')
+  plop.setWelcomeMessage('请选择需要创建的模式')
   plop.setGenerator('create Markdown documents', {
     // 生成器的描述
     description: '创建Markdown文件',
