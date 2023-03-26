@@ -4,9 +4,11 @@
 import { relative } from 'path'
 import { readdirSync, lstatSync } from 'fs'
 import chalk from 'chalk'
+
 const error = chalk.bold.red
 const warning = chalk.hex('#FFA500')
 const DocsFolder = 'docs/articles'
+const previewDemoFolder = 'docs/demos'
 function getFolder(path) {
   let components = []
   const files = readdirSync(path)
@@ -21,17 +23,20 @@ function getFolder(path) {
 }
 
 const getFolderAdd = () => {
-  let s = getFolder(DocsFolder)
-  s.unshift(DocsFolder)
-  // console.log(s)
-  return s
+  let Folder = getFolder(DocsFolder)
+  Folder.unshift(DocsFolder)
+
+  return Folder
 }
+const getFolderAddpreviewDemo = () => {
+  let Folder = getFolder(previewDemoFolder)
+  Folder.unshift(previewDemoFolder)
+  return Folder
+}
+let reg = new RegExp('^[a-zA-Z0-9\u4e00-\u9fa5\u0800-\u4e00]+$')
 
 export default (plop) => {
   plop.setWelcomeMessage('请选择需要创建的模式：')
-  // setGenerator可以设置一个生成器，每个生成器都可用于生成特定的文件
-  // 接收两个参数，生成器的名称和配置选项
-
   plop.setGenerator('create Markdown documents', {
     // 生成器的描述
     description: '创建Markdown文件',
@@ -48,8 +53,8 @@ export default (plop) => {
         name: 'name', // 接收变量的参数
         message: '请输入Markdown文件名称',
         default: '目录名/文档名 或者 直接文档名',
-        validate: (v) => {
-          if (!v || v.trim === '') {
+        validate: (value) => {
+          if (!value || value.trim === '') {
             return '文件名不能为空'
           } else {
             return true
@@ -88,87 +93,67 @@ export default (plop) => {
     },
   })
 
-  plop.setGenerator('table-page', {
-    description: '创建一个表格页面',
+  plop.setGenerator('Create Preview Demo', {
+    description: '创建previewDemo',
     prompts: [
       {
         type: 'list',
         name: 'path',
-        message: '请选择页面创建目录',
-        choices: getFolderAdd,
+        message: '请选择预览组件的创建目录',
+        choices: [previewDemoFolder], //getFolderAddpreviewDemo,
       },
       {
         type: 'input',
         name: 'name',
-        message: '请输入页面文件名称',
-        validate: (v) => {
-          if (!v || v.trim === '') {
-            return '文件名不能为空'
+        message: '请输入创建previewDemo名称',
+        validate: (value) => {
+          if (!reg.test(value)) {
+            return `${error('[ERROR]')} ${warning('不能输入非法字符')}` //'不能输入非法字符'
           } else {
             return true
           }
         },
       },
+      {
+        type: 'confirm',
+        name: 'confirm',
+        message: '是否创建',
+        default: false,
+        value: 'confirm',
+      },
     ],
     actions: (data) => {
-      let relativePath = relative(DocsFolder, data.path)
+      if (data.confirm == false) {
+        console.log(
+          `${error('[取消创建]')} ${warning('previewDemo')} -> ${data.name} `
+        )
+        return
+      }
+      let relativePath = relative(previewDemoFolder, data.path)
       const actions = [
         {
           type: 'add',
           path: `${data.path}/{{name}}.vue`,
-          templateFile: 'plop-templates/docs.hbs',
+          templateFile: 'plop-templates/previewDemo.hbs',
           data: {
             componentName: `${relativePath} ${data.name}`,
           },
         },
-      ]
-      return actions
-    },
-  })
-
-  plop.setGenerator('component', {
-    description: '创建组件',
-    prompts: [
-      {
-        type: 'confirm',
-        name: 'isGlobal',
-        message: '是否为全局组件',
-        default: true,
-      },
-      {
-        type: 'list',
-        name: 'path',
-        message: '请选择组件创建目录',
-        choices: getFolderAdd,
-        when: (answers) => {
-          return !answers.isGlobal
-        },
-      },
-      {
-        type: 'input',
-        name: 'name',
-        message: '请输入组件名称',
-        validate: (v) => {
-          if (!v || v.trim === '') {
-            return '组件名称不能为空'
-          } else {
-            return true
-          }
-        },
-      },
-    ],
-    actions: (data) => {
-      let path = ''
-      if (data.isGlobal) {
-        path = 'src/components/{{properCase name}}/index.vue'
-      } else {
-        path = `${data.path}/components/{{properCase name}}/index.vue`
-      }
-      const actions = [
         {
           type: 'add',
-          path: path,
-          templateFile: 'plop-templates/component.hbs',
+          path: `${data.path}/css/{{name}}.css`,
+          templateFile: 'plop-templates/previewDemo-css.hbs',
+          data: {
+            componentName: `${relativePath} ${data.name}`,
+          },
+        },
+        {
+          type: 'add',
+          path: `${data.path}/types/{{name}}.d.ts`,
+          templateFile: 'plop-templates/previewDemo-d-ts.hbs',
+          data: {
+            componentName: `${relativePath} ${data.name}`,
+          },
         },
       ]
       return actions
