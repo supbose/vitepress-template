@@ -15,7 +15,7 @@
                     :style="{ backgroundColor: 'var(--vp-c-bg-soft-up)', color: '#c1c4c79a', padding: '3px' }"
                     @error="errorHandler" :imageUrl="item.img">
                 </Avatar> -->
-                    <img :src="item.img ?? 'https://www.baidu.com/img/bd_logo1.png'" alt="" mode="scaleToFill">
+                    <img :src="item.img" alt="" mode="scaleToFill">
                 </div>
                 <div class="font">
                     {{ item.text }}
