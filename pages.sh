@@ -12,16 +12,16 @@ cd packages/docs/docs/.vuepress/dist
 # deploy to github pages
 echo 'www.yiruan.wang' > CNAME
 
-if [ -z "$GITHUB_TOKEN" ]; then
+if [ -z "$SUPBOSE_VITEPRESS" ]; then
   msg='deploy'
-  githubUrl=git@github.com:yiruanwang/www.git
+  githubUrl=git@github.com:supbose/vitepress-template.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://yiruanwang:${GITHUB_TOKEN}@github.com/yiruanwang/www.git
+  githubUrl=https://supbose:${SUPBOSE_VITEPRESS}@github.com/vitepress-template.git
   git config --global user.name "supbose"
   git config --global user.email "yshxw@qq.com"
 fi
 git init
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git push -f $githubUrl mian:gh-pages # 推送到github gh-pages分支
