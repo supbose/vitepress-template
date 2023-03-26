@@ -5,6 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"TempPull": "pnpm exec bumpp -r",
+		"deploy": "bash pages.sh",
+		"docs:build": "pnpm --filter docs docs:build",
 		"docs:dev": "pnpm --filter docs docs:dev",
 		"docs:cloud": "pnpm TempPull && pnpm --filter docs cloud",
 		"docs:Nocloud": "pnpm TempPull && pnpm --filter docs docs:build"
