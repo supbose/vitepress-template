@@ -31,5 +31,5 @@ jobs:
       - name: Build-and-gh-pages # 步骤3
         env:
           GITHUB_TOKEN: ${{ secrets.SUPBOSE_VITEPRESS }}
-        run:  npm install pnpm -g && pnpm install --no-frozen-lockfile && npm deploy
+        run:  npm install pnpm -g && pnpm install --no-frozen-lockfile && pnpm docs:deploy
 
