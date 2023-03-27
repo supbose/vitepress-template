@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
       - name: Checkout # 步骤1
@@ -31,5 +31,5 @@ jobs:
       - name: Build-and-gh-pages # 步骤3
         env:
           GITHUB_TOKEN: ${{ secrets.SUPBOSE_VITEPRESS }}
-        run:  npm install pnpm -g && pnpm deploy
+        run:  npm install pnpm -g && pnpm install --no-frozen-lockfile && pnpm deploy
 
