@@ -7,7 +7,7 @@ set -e
 pnpm docs:build
 
 # 进入生成的文件夹
-cd packages/docs/docs/.vuepress/dist
+cd packages/docs/docs/.vitepress/dist
 
 # deploy to github pages
 echo 'vitepress.panxie.cc' > CNAME
