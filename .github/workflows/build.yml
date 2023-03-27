@@ -1,4 +1,4 @@
-name: CI
+name: vitepress->gh-pages
 
 #on: [push]
 
