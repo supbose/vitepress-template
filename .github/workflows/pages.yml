@@ -18,5 +18,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
     - name: Install dependencies
-        GITHUB_TOKEN: ${{ secrets.SUPBOSE_VITEPRESS }}
       run: pnpm docs:deploy
