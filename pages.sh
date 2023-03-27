@@ -3,11 +3,15 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+cd packages/docs/
+
+pnpm install
+
 # 生成静态文件
 pnpm docs:build
 
 # 进入生成的文件夹
-cd packages/docs/docs/.vitepress/dist
+cd docs/.vitepress/dist
 
 # deploy to github pages
 echo 'vitepress.panxie.cc' > CNAME
