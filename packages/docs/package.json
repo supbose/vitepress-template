@@ -20,7 +20,7 @@
     "@algolia/client-search": "^4",
     "@qingshu/vitepress-plugin-search": "^1.0.3",
     "@samkirkland/ftp-deploy": "^1.2.3",
-    "@types/node": "^18.15.7",
+    "@types/node": "^18.15.10",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "bumpp": "^9.0.0",
@@ -33,7 +33,7 @@
     "ssh2-sftp-client": "^9.0.4",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
-    "vitepress": "1.0.0-alpha.61",
+    "vitepress": "1.0.0-alpha.63",
     "vue-tsc": "^1.2.0"
   },
   "pnpm": {
