@@ -5,7 +5,6 @@ export default defineConfig((env: ConfigEnv) => {
   return {
     plugins: [
       vueJsx(),
-      // VitePluginVitepressDemo({ glob: './**/demo/**/*.{vue,jsx,tsx,js,ts}' }),
       SearchPlugin({
         previewLength: 20,
         buttonLabel: '搜索',

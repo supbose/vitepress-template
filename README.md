@@ -1,3 +1,11 @@
-# template
+# vitepress-template
 
-## vitepress-demo-preview
+```sh
+npm install pnpm -g
+
+pnpm install
+
+pnpm docs:dev
+
+pnpm docs:build
+```

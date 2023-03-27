@@ -10,7 +10,7 @@ yarn build
 cd packages/docs/docs/.vuepress/dist
 
 # deploy to github pages
-echo 'www.yiruan.wang' > CNAME
+echo 'vitepress.panxie.cc' > CNAME
 
 if [ -z "$SUPBOSE_VITEPRESS" ]; then
   msg='deploy'
