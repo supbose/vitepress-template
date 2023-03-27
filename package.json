@@ -1,6 +1,6 @@
 {
 	"name": "template",
-	"version": "1.0.14",
+	"version": "1.0.15-beta.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
