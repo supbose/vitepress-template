@@ -3,7 +3,7 @@
 ```sh
 npm install pnpm -g
 
-pnpm install
+pnpm install --no-frozen-lockfile
 
 pnpm docs:dev
 
