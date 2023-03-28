@@ -3,9 +3,9 @@
         <div class="imgArticle">
             <div v-for="(item, index) in listData " :key="index">
                 <a class="items" :href="item.url">
-                    <div class="img">
-                        <img :src="item.img" alt="" mode="scaleToFill">
-                    </div>
+                    <el-avatar :size="88" fit="fill" :src="item.img" @error="errorHandler">
+                        <img src="/noImages1.png" class="noimg" />
+                    </el-avatar>
                     <div class="font">
                         {{ item.text }}
                     </div>
@@ -16,27 +16,22 @@
 </template>
 <script lang="ts" setup>
 import { PropType, reactive } from 'vue'
-
 import { typeListData } from './interface';
+
 const props = defineProps({
     list: {
         type: Object as PropType<typeListData[]>,
         require: true,
         default: () => [{
             url: 'https://www.baidu.com',
-            img: '/images/logo.png',
+            img: 'https://www.baidu.com/img/bd_logo1.png',
             text: '百度一下',
         }]
     }
 });
 const listData = reactive(props.list)
-
-const errorHandler = () => {
-    return true
-}
+const errorHandler = () => true
 </script>
-
-
 <style scoped lang="scss">
 .Article {
     display: flex;
@@ -45,7 +40,7 @@ const errorHandler = () => {
 
 .imgArticle {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 14px;
     margin-top: 20px;
     flex-wrap: wrap;
@@ -68,18 +63,6 @@ const errorHandler = () => {
         width: 88px;
     }
 
-    .img {
-        width: 88px;
-        // max-width: 100%;
-        // height: 88px;
-        min-height: 88px;
-        margin-bottom: 5px;
-        border-radius: 50%;
-        padding: 10px;
-        background-color: var(--vp-c-bg-soft-up);
-        overflow: hidden;
-    }
-
     .font {
         color: var(--vp-c-text-1);
         margin-top: 5px;
@@ -87,7 +70,4 @@ const errorHandler = () => {
 
 }
 </style>
-
-
-
 

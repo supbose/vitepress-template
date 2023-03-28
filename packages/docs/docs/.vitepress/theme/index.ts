@@ -2,6 +2,7 @@ import Theme from 'vitepress/theme'
 import { h } from 'vue'
 import AnimateTitle from './components/AnimationTitle.vue'
 import imagesArticle from './components/imagesArticle.vue'
+import EleimagesArticle from './components/EleimagesArticle.vue'
 import { AntDesignContainer } from '@vitepress-demo-preview/component'
 // import '@vitepress-demo-preview/component/dist/style.css'
 import './styles/style.css'
@@ -14,6 +15,7 @@ export default {
   enhanceApp({ app }) {
     app.use(ElementPlus)
     app.component('imagesArticle', imagesArticle)
+    app.component('EleimagesArticle', EleimagesArticle)
     app.component('demo-preview', AntDesignContainer)
   },
   Layout() {

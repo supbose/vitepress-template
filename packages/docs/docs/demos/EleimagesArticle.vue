@@ -1,6 +1,6 @@
 <template>
     <div>
-        <imagesArticle />
+        <EleimagesArticle />
     </div>
 </template>
 
