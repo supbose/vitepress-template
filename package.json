@@ -1,6 +1,6 @@
 {
 	"name": "template",
-	"version": "1.0.15-beta.5",
+	"version": "1.0.15-beta.6",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -20,7 +20,17 @@
 		"vue3"
 	],
 	"author": "supbose",
-	"license": "ISC",
+	"license": "MIT",
+	"contributors": [
+		{
+			"name": "flingyp",
+			"url": "https://github.com/flingyp/vitepress-demo-preview"
+		},
+		{
+			"name": "pzy915",
+			"url": "https://gitee.com/free_pan/vitepress-plugin-search"
+		}
+	],
 	"devDependencies": {
 		"bumpp": "^9.0.0"
 	}
