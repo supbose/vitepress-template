@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: vitepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: supbose/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.SUPBOSE_VITEPRESS  }} # 自己的密匙
         TARGET_REPO: supbose/vitepress-template    # 自己的仓库地址
