@@ -3,6 +3,10 @@ on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.19.x]
+
     steps:
     - name: Checkout
       uses: actions/checkout@master
