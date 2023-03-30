@@ -58,7 +58,7 @@ const listImagesArticle = [
     }
     ,
     {
-        img: '/images/logo.png',
+        img: 'https://img.anfensi.com/upload/2021-11/20211151554522506.png',
         text: '易软',
         url: '/pages/index'
     }
@@ -111,7 +111,7 @@ const listImagesArticle = [
     }
     ,
     {
-        img: '/images/logo.png',
+        img: 'https://img.anfensi.com/upload/2021-11/20211151554522506.png',
         text: '易软',
         url: '/pages/index'
     }
