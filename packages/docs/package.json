@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "1.0.15-beta.6",
+  "version": "1.0.15",
   "description": "",
   "main": "index.js",
   "type": "module",
