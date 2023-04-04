@@ -1,0 +1,23 @@
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.19.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vitepress-deploy
+      uses: supbose/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.SUPBOSE_VITEPRESS  }} # 自己的密匙
+        TARGET_REPO: supbose/vitepress-template    # 自己的仓库地址
+        TARGET_BRANCH: gh-pages #这是github默认  你可以自己修改称自己的。但是在pages设置中需要修改
+        BUILD_SCRIPT: npm install pnpm -g && pnpm install --no-frozen-lockfile && pnpm docs:build
+        BUILD_DIR: packages/docs/docs/.vitepress/dist/
+        CNAME: https://vitepress.panxie.cc  #这里修改成自己的 Custom domain
+

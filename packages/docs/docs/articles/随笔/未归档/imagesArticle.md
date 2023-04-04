@@ -45,20 +45,17 @@ const listImagesArticle = [
         // img: '/images/logo.png',
         text: '易软',
         url: '/pages/index'
-    }
-    ,
+    },
     {
         img: '/images/logo.png',
         text: '易软',
         url: '/pages/index'
-    }
-    ,
+    },
     {
         img: '/images/logo.png',
         text: '易软',
         url: '/pages/index'
-    }
-    ,
+    },
     {
         img: '/images/logo.png',
         text: '易软',

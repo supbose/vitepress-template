@@ -8,7 +8,7 @@
     "plop": "plop",
     "watchChangeRestartVitepress": "node ./docs/.vitepress/watchChangeRestartVitepress.mjs",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "ftp": "node --experimental-json-modules ./scripts/ftp.config.js",
     "cloud": "pnpm docs:build && pnpm ftp"
@@ -20,10 +20,10 @@
     "@algolia/client-search": "^4",
     "@qingshu/vitepress-plugin-search": "^1.0.3",
     "@samkirkland/ftp-deploy": "^1.2.3",
-    "@types/node": "^18.15.10",
+    "@types/node": "^18.15.11",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "bumpp": "^9.0.0",
+    "bumpp": "^9.1.0",
     "chalk": "^5.2.0",
     "chokidar": "^3.5.3",
     "flexsearch": "^0.7.31",
@@ -31,9 +31,9 @@
     "plop": "^3.1.2",
     "sass": "^1.60.0",
     "ssh2-sftp-client": "^9.0.4",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.3",
     "vite": "^4.2.1",
-    "vitepress": "1.0.0-alpha.63",
+    "vitepress": "1.0.0-alpha.65",
     "vue-tsc": "^1.2.0"
   },
   "pnpm": {
@@ -45,8 +45,8 @@
   },
   "dependencies": {
     "@vitepress-demo-preview/component": "^2.2.0",
-    "@vitepress-demo-preview/plugin": "^1.1.7",
-    "element-plus": "^2.3.1",
+    "@vitepress-demo-preview/plugin": "1.1.7",
+    "element-plus": "^2.3.2",
     "markdown-it-custom-attrs": "^1.0.2",
     "vue": "^3.2.47"
   }

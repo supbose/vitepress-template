@@ -96,20 +96,17 @@ const listImagesArticle = [
         img: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
         text: '易软',
         url: '/pages/index'
-    }
-    ,
+    },
     {
         // img: '/images/logo.png',
         text: '易软',
         url: '/pages/index'
-    }
-    ,
+    },
     {
         img: '/images/logo.png',
         text: '易软',
         url: '/pages/index'
-    }
-    ,
+    },
     {
         img: 'https://img.anfensi.com/upload/2021-11/20211151554522506.png',
         text: '易软',

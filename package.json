@@ -3,6 +3,7 @@
 	"version": "1.0.15",
 	"description": "",
 	"main": "index.js",
+	"packageManager": "pnpm@7.30.5",
 	"scripts": {
 		"TempPull": "pnpm exec bumpp -r",
 		"docs:deploy": "bash pages.sh",
