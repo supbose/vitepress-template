@@ -34,7 +34,7 @@ demo-preview=../../../demos/imagesArticleList.vue
 
 :::
 
-<script>
+<script >
 const listImagesArticle = [
     {
         img: 'http://www.masonjs.cn/columns/Html.png',

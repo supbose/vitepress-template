@@ -1,6 +1,6 @@
 ---
 title: demo
-lastUpdated: false
+lastUpdated: true
 ---
 
 # Preview Demo
