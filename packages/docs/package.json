@@ -8,7 +8,7 @@
     "plop": "plop",
     "watchChangeRestartVitepress": "node ./docs/.vitepress/watchChangeRestartVitepress.mjs",
     "docs:dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "ftp": "node --experimental-json-modules ./scripts/ftp.config.js",
     "cloud": "pnpm docs:build && pnpm ftp"
