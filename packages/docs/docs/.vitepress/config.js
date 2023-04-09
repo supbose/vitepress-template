@@ -2,7 +2,7 @@
  * @ Author: supbose
  * @ Create Time: 2023-03-15 10:28:51
  * @ Modified by: supbose
- * @ Modified time: 2023-03-30 23:39:08
+ * @ Modified time: 2023-04-09 11:31:01
  * @ Description: qingshu.work
  */
 
@@ -18,16 +18,13 @@ import sidebar from './sidebar'
 import updateInfo from './watchJson.json'
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
 
-import {
-  componentPreview,
-  containerPreview,
-} from '@vitepress-demo-preview/plugin'
+import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
 
 console.log(updateInfo)
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '拥抱阳光',
+  title: 'vitepress-templates',
   description:
     'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
 
@@ -39,16 +36,16 @@ export default defineConfig({
   markdown: {
     theme: 'material-theme',
     headers: {
-      level: [0, 0],
+      level: [0, 0]
     },
     lineNumbers: true,
-    config: (md) => {
+    config: md => {
       md.use(componentPreview)
       md.use(containerPreview)
       md.use(mdItCustomAttrs, 'image', {
-        'data-fancybox': 'gallery',
+        'data-fancybox': 'gallery'
       })
-    },
+    }
   },
 
   themeConfig: {
@@ -56,12 +53,12 @@ export default defineConfig({
     siteTitle: false,
     head: [
       // 添加图标
-      ['link', { rel: 'icon', href: '/favicon.png' }],
+      ['link', { rel: 'icon', href: '/favicon.png' }]
     ],
     lastUpdatedText: '最后更新',
     docFooter: {
       prev: '上一篇',
-      next: '下一篇',
+      next: '下一篇'
     },
     outlineTitle: '文档索引',
     outline: 'deep',
@@ -78,15 +75,15 @@ export default defineConfig({
     socialLinks: [
       {
         icon: {
-          svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>码云</title><path d="M11.984 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.016 0zm6.09 5.333c.328 0 .593.266.592.593v1.482a.594.594 0 0 1-.593.592H9.777c-.982 0-1.778.796-1.778 1.778v5.63c0 .327.266.592.593.592h5.63c.982 0 1.778-.796 1.778-1.778v-.296a.593.593 0 0 0-.592-.593h-4.15a.592.592 0 0 1-.592-.592v-1.482a.593.593 0 0 1 .593-.592h6.815c.327 0 .593.265.593.592v3.408a4 4 0 0 1-4 4H5.926a.593.593 0 0 1-.593-.593V9.778a4.444 4.444 0 0 1 4.445-4.444h8.296Z"/></svg>',
+          svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>码云</title><path d="M11.984 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.016 0zm6.09 5.333c.328 0 .593.266.592.593v1.482a.594.594 0 0 1-.593.592H9.777c-.982 0-1.778.796-1.778 1.778v5.63c0 .327.266.592.593.592h5.63c.982 0 1.778-.796 1.778-1.778v-.296a.593.593 0 0 0-.592-.593h-4.15a.592.592 0 0 1-.592-.592v-1.482a.593.593 0 0 1 .593-.592h6.815c.327 0 .593.265.593.592v3.408a4 4 0 0 1-4 4H5.926a.593.593 0 0 1-.593-.593V9.778a4.444 4.444 0 0 1 4.445-4.444h8.296Z"/></svg>'
         },
-        link: 'https://github.com/supbose/vitepress-template',
-      },
+        link: 'https://github.com/supbose/vitepress-template'
+      }
     ],
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: `Copyright © 2021 by supbose | version:${version} `,
-    },
-  },
+      copyright: `Copyright © 2021 by supbose | version:${version} `
+    }
+  }
 })
