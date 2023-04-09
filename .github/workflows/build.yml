@@ -35,3 +35,12 @@ jobs:
           github_token: ${{ secrets.SUPBOSE_VITEPRESS }}
           publish_dir: packages/docs/docs/.vitepress/dist/
           cname: https://vitepress.panxie.cc
+      - name: FTP Sync files #上传到ftp服务器
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{secrets.FTP_HOST}}
+          username: ${{secrets.FTP_NAME}}
+          password: ${{secrets.FTP_PWD}}
+          port: ${{secrets.FTP_PORT}}
+          local-dir: ./packages/docs/docs/.vitepress/dist/
+          server-dir: ./

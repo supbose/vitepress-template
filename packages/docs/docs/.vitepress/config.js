@@ -2,7 +2,7 @@
  * @ Author: supbose
  * @ Create Time: 2023-03-15 10:28:51
  * @ Modified by: supbose
- * @ Modified time: 2023-04-09 13:38:20
+ * @ Modified time: 2023-04-09 18:06:23
  * @ Description: qingshu.work
  */
 
@@ -69,8 +69,8 @@ export default defineConfig({
     // nav: getNavData({ enableDirActiveMatch: true }),
     // sidebar: getSidebarData(),
     // editLink: {
-    // 	pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-    // 	text: '编辑'
+    //   pattern: 'https://github.com/supbose/vitepress-template/edit/main/packages/docs/docs/:path',
+    //   text: '编辑'
     // },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/supbose/vitepress-template' },
