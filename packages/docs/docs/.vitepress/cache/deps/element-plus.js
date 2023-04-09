@@ -19943,7 +19943,7 @@ var useZIndex = (zIndexOverrides) => {
   };
 };
 
-// ../../node_modules/.pnpm/@floating-ui+core@1.2.4/node_modules/@floating-ui/core/dist/floating-ui.core.browser.mjs
+// ../../node_modules/.pnpm/@floating-ui+core@1.2.5/node_modules/@floating-ui/core/dist/floating-ui.core.browser.mjs
 function getAlignment(placement) {
   return placement.split("-")[1];
 }
@@ -20019,22 +20019,6 @@ var computePosition = async (reference, floating, config) => {
   } = config;
   const validMiddleware = middleware.filter(Boolean);
   const rtl = await (platform2.isRTL == null ? void 0 : platform2.isRTL(floating));
-  {
-    if (platform2 == null) {
-      console.error(["Floating UI: `platform` property was not passed to config. If you", "want to use Floating UI on the web, install @floating-ui/dom", "instead of the /core package. Otherwise, you can create your own", "`platform`: https://floating-ui.com/docs/platform"].join(" "));
-    }
-    if (validMiddleware.filter((_ref) => {
-      let {
-        name
-      } = _ref;
-      return name === "autoPlacement" || name === "flip";
-    }).length > 1) {
-      throw new Error(["Floating UI: duplicate `flip` and/or `autoPlacement` middleware", "detected. This will lead to an infinite loop. Ensure only one of", "either has been passed to the `middleware` array."].join(" "));
-    }
-    if (!reference || !floating) {
-      console.error(["Floating UI: The reference and/or floating element was not defined", "when `computePosition()` was called. Ensure that both elements have", "been created and can be measured."].join(" "));
-    }
-  }
   let rects = await platform2.getElementRects({
     reference,
     floating,
@@ -20080,11 +20064,6 @@ var computePosition = async (reference, floating, config) => {
         ...data
       }
     };
-    {
-      if (resetCount > 50) {
-        console.warn(["Floating UI: The middleware lifecycle appears to be running in an", "infinite loop. This is usually caused by a `reset` continually", "being returned without a break condition."].join(" "));
-      }
-    }
     if (reset && resetCount <= 50) {
       resetCount++;
       if (typeof reset === "object") {
@@ -20163,9 +20142,6 @@ var arrow = (options) => ({
       elements
     } = state;
     if (element == null) {
-      {
-        console.warn("Floating UI: No `element` was passed to the `arrow` middleware.");
-      }
       return {};
     }
     const paddingObject = getSideObjectFromPadding(padding);

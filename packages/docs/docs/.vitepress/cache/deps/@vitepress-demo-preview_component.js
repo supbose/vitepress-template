@@ -21,7 +21,7 @@ import {
   withCtx
 } from "./chunk-CG6NIPGH.js";
 
-// ../../node_modules/.pnpm/@vitepress-demo-preview+component@2.2.0_sip6x5husda5kzg2sqstcwuudu/node_modules/@vitepress-demo-preview/component/dist/preview-component.js
+// ../../node_modules/.pnpm/@vitepress-demo-preview+component@2.2.0_zmxsty7o2oyjk7tlqascbjf3iy/node_modules/@vitepress-demo-preview/component/dist/preview-component.js
 var $ = (t, n) => {
   const e = t.__vccOpts || t;
   for (const [c, i] of n)

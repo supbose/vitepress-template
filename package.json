@@ -6,7 +6,6 @@
 	"packageManager": "pnpm@7.30.5",
 	"scripts": {
 		"TempPull": "pnpm exec bumpp -r",
-		"docs:deploy": "bash pages.sh",
 		"docs:build": "pnpm --filter docs docs:build",
 		"docs:dev": "pnpm --filter docs docs:dev",
 		"docs:cloud": "pnpm TempPull && pnpm --filter docs cloud",

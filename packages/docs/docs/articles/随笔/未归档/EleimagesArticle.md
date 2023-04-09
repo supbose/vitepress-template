@@ -1,7 +1,7 @@
 ---
 title: EleimagesArticle
 editLink: true
-lastUpdated: false
+lastUpdated: true
 sidebar: true
 docFooter: false
 tags:
