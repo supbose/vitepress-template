@@ -24,4 +24,4 @@ dist-ssr
 *.sln
 *.sw?
 .auth/ftp.json
-.github/workflows/Ftp-build.yml
+# .github/workflows/Ftp-build.yml
