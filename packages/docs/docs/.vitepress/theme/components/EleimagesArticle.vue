@@ -14,7 +14,7 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup>
+<script setup lang="ts">
 import { PropType, reactive } from 'vue'
 import { typeListData } from './interface';
 
