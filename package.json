@@ -1,6 +1,6 @@
 {
 	"name": "template",
-	"version": "1.0.17",
+	"version": "1.0.18-beta.0",
 	"description": "",
 	"main": "index.js",
 	"packageManager": "pnpm@7.30.5",
