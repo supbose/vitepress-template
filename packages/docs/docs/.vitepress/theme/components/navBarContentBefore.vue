@@ -3,7 +3,7 @@
  * @ Author: supbose
  * @ Create Time: 2023-04-09 20:35:37
  * @ Modified by: supbose
- * @ Modified time: 2023-04-10 00:31:03
+ * @ Modified time: 2023-04-10 00:42:17
  * @ Description: qingshu.work
  -->
 
@@ -27,11 +27,11 @@ const pageTo = () => {
         console.log(`..`);
     } else if (language == 'zh-CN') {
         localStorage.setItem('language', language)
-        localStorage.setItem('domain', domain)
+        localStorage.setItem('domain', 'vitepress.github.qingshu.work')
         location.href = '//vitepress.github.qingshu.work' + page
     } else {
         localStorage.setItem('language', language)
-        localStorage.setItem('domain', domain)
+        localStorage.setItem('domain', 'vitepress.panxie.cc')
         location.href = '//vitepress.panxie.cc' + page
     }
 }
