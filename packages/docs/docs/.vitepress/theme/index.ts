@@ -25,7 +25,7 @@ export default {
       'home-hero-info': () => h(AnimateTitle),
       'aside-top': () => h('div', '可用`aside-top`'),
       'aside-bottom': () => h('div', { style: { height: '300px' } }, '可用Sponsors'),
-      'nav-bar-content-before': () => h(navBarContentBefore)
+      // 'nav-bar-content-before': () => h(navBarContentBefore)
       // 'nav-bar-title-before': () => h('div', '可用`nav-screen-content-before`'),
       // 'nav-bar-title-after': () => h('div', '可用`nav-bar-title-after`'),
       // 'nav-bar-content-before': () => h('div', '可用`nav-bar-content-before`'),

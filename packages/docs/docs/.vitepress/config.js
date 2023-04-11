@@ -2,7 +2,7 @@
  * @ Author: supbose
  * @ Create Time: 2023-03-15 10:28:51
  * @ Modified by: supbose
- * @ Modified time: 2023-04-09 18:06:23
+ * @ Modified time: 2023-04-10 13:35:35
  * @ Description: qingshu.work
  */
 
@@ -23,6 +23,7 @@ import { componentPreview, containerPreview } from '@vitepress-demo-preview/plug
 console.log(updateInfo)
 
 export default defineConfig({
+  base: '/',
   lang: 'zh-CN',
   title: 'vitepress-templates',
   description:
