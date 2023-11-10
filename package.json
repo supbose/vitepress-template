@@ -32,6 +32,6 @@
 		}
 	],
 	"devDependencies": {
-		"bumpp": "^9.0.0"
+		"bumpp": "^9.2.0"
 	}
 }
