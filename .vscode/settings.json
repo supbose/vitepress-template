@@ -23,7 +23,7 @@
             "Description": "qingshu.work",
         }
     },
-    "workbench.productIconTheme": "el-vsc-v1-icons",
+    "workbench.productIconTheme": "Default",
     "[vue]": {
         "editor.defaultFormatter": "Vue.volar"
     },
@@ -82,7 +82,7 @@
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true,
     },
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "vs-seti",
     "window.commandCenter": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -121,7 +121,7 @@
         "MD010": false
     },
     // This is all that matters
-    "workbench.colorTheme": "Bearded Theme Vivid Purple",
+    "workbench.colorTheme": "Default Dark+",
     // The Cursive font is operator Mono, it's $200 and you need to buy it to get the cursive. Dank Mono or Victor Mono are good alternatives
     // "editor.fontFamily": "'JetBrains Mono','Fira Code',Menlo,Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
