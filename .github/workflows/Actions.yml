@@ -31,8 +31,8 @@ jobs:
           echo "拷贝文件开始"
           dist_path=packages/docs/docs/.vitepress/dist/
           cd $dist_path
-          date_time=`date +"%Y%m%d%H%M"`
-          echo "${date_time}" > GithubPages
+          date_time=`date +"%Y-%m-%d %H:%M:%S"`
+          echo "${date_time}" > GithubActionsPages
         # cp Dockerfile docs/.vuepress/dist
 
       # 写入时间文件
