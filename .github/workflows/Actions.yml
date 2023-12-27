@@ -25,7 +25,10 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       # Docs 安装依赖
       - name: Docs Build
-        run: pnpm docs:build && pnpm deploy
+        run: pnpm docs:build
+      # 写入时间文件
+      - name: Actions
+        run: pnpm deploy
       # 发布
       # 发布在 gh-pages 分支，会自动创建
       # 将打包后的 dist 目录放到 gh-pages 分支
