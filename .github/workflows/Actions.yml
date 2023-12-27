@@ -26,9 +26,18 @@ jobs:
       # Docs 安装依赖
       - name: Docs Build
         run: pnpm docs:build
+      - name: 拷贝dockerfile
+        run: |
+          echo "拷贝文件开始"
+          dist_path=packages/docs/docs/.vitepress/dist/
+          cd $dist_path
+          date_time=`date +"%Y%m%d%H%M"`
+          echo "${date_time}" > GithubPages
+        # cp Dockerfile docs/.vuepress/dist
+
       # 写入时间文件
-      - name: Actions
-        run: pnpm deploy
+      # - name: Actions
+        # run: pnpm deploy
       # 发布
       # 发布在 gh-pages 分支，会自动创建
       # 将打包后的 dist 目录放到 gh-pages 分支
