@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"packageManager": "pnpm@7.30.5",
 	"scripts": {
+    "deploy": "bash Actions.sh",
 		"TempPull": "pnpm exec bumpp -r",
 		"docs:build": "pnpm --filter docs docs:build",
 		"docs:dev": "pnpm --filter docs docs:dev",
