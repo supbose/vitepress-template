@@ -3,7 +3,7 @@ name: Build and Actions
 on:
   push:
   schedule:
-    - cron: '*/59 * * * *'
+    - cron: '0 0 0/3 * * ?'
 jobs:
   # job 名
   build-and-deploy:
