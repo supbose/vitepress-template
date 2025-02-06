@@ -9,7 +9,8 @@
 		"docs:build": "pnpm --filter docs build",
 		"docs:dev": "pnpm --filter docs dev",
 		"docs:cloud": "pnpm TempPull && pnpm --filter docs cloud",
-		"docs:Nocloud": "pnpm TempPull && pnpm --filter docs docs:build"
+		"docs:Nocloud": "pnpm TempPull && pnpm --filter docs docs:build",
+		"release": "vbumpp -r"
 	},
 	"keywords": [
 		"api",
@@ -32,6 +33,7 @@
 		}
 	],
 	"devDependencies": {
+		"@vill-v/bumpp": "^2.2.5",
 		"bumpp": "^9.2.0"
 	}
 }
