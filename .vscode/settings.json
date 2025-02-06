@@ -76,11 +76,11 @@
     "livePreview.portNumber": 5050,
     "files.autoSave": "onFocusChange",
     "editor.codeActionsOnSave": {
-        "source.fixAll": false,
-        "source.formatAll": false,
-        "source.organizeImports": false,
-        "source.fixAll.eslint": true,
-        "source.fixAll.stylelint": true,
+        "source.fixAll": "never",
+        "source.formatAll": "never",
+        "source.organizeImports": "never",
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
     },
     "workbench.iconTheme": "vs-seti",
     "window.commandCenter": true,

@@ -3,8 +3,8 @@
 	"version": "1.0.18-beta.6",
 	"description": "",
 	"main": "index.js",
-	"packageManager": "pnpm@7.30.5",
-	"scripts": { 
+	"packageManager": "pnpm@10.2.0",
+	"scripts": {
 		"TempPull": "pnpm exec bumpp -r",
 		"docs:build": "pnpm --filter docs docs:build",
 		"docs:dev": "pnpm --filter docs docs:dev",
