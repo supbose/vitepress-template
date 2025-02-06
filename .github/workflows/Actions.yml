@@ -2,6 +2,8 @@ name: Build and Actions
 # 监听 main 分支的推送
 on:
   push:
+    branches:
+      - main
   schedule:
     - cron: '*/59 * * * *'
 jobs:
@@ -13,10 +15,10 @@ jobs:
     steps:
       # 获取源码
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v3
       # 安装Pnpm
       - name: Install Pnpm
-        run: npm install pnpm -g
+        run: npm install -g pnpm
       # 下载依赖
       - name: Install dependencies and Build
         run: pnpm install --no-frozen-lockfile
@@ -26,9 +28,9 @@ jobs:
       - name: 创建GithubActionsPages
         run: |
           echo "拷贝文件开始"
-          dist_path=packages/docs/docs/.vitepress/dist/
+          dist_path=packages/docs/doc_build
           cd $dist_path
-          date_time=`TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"`
+          date_time=$(TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S")
           echo "${date_time}" > GithubActionsPages
       # 发布
       # 发布在 gh-pages 分支，会自动创建
@@ -36,6 +38,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.SUPBOSE_VITEPRESS }}
-          publish_dir: packages/docs/docs/.vitepress/dist/
-          cname: https://vitepress.panxie.cc      
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: packages/docs/doc_build
+          cname: vitepress.panxie.cc
