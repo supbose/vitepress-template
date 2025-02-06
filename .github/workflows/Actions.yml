@@ -15,7 +15,7 @@ jobs:
     steps:
       # 获取源码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # 安装Pnpm
       - name: Install Pnpm
         run: npm install -g pnpm
@@ -36,7 +36,7 @@ jobs:
       # 发布在 gh-pages 分支，会自动创建
       # 将打包后的 dist 目录放到 gh-pages 分支
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: packages/docs/doc_build
